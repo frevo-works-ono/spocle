@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>ログイン</title>
+</head>
+<body>
+
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" th:href="@{/}"><span></span></a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a th:href="@{/}" href="../goods/showGoods.html">ホーム</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<br />
+
+	<div class="container">
+		<h2>ログインフォーム</h2>
+
+		<form method="post" th:action="@{/login}" class="form-inline">
+			<input type="text" name="mailaddress" class="form-control"
+				placeholder="E-mail" required="required" autofocus="autofocus" /> <input
+				type="password" name="password" class="form-control"
+				placeholder="パスワード" required="required" />
+			<button type="submit" class="btn btn-default">ログイン</button>
+		</form>
+	</div>
+</body>
+</html>

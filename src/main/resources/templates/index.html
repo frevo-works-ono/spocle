@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>トップ</title>
+</head>
+<body>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" th:href="@{/}"><span></span></a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a th:href="@{/}" href="../goods/showGoods.html">ホーム</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<a class="btn btn-link" th:href="@{/member}">メンバー</a>
+		<a class="btn btn-link" th:href="@{/team}">チーム</a>
+		<a class="btn btn-link" th:href="@{/schedule}">スケジュール</a>
+		<a class="btn btn-link" th:href="@{/blog}">ブログ</a>
+		<a class="btn btn-link" th:href="@{/team/regist}">チーム登録</a>
+	</div>
+</body>
+</html>

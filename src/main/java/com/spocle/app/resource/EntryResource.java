@@ -19,7 +19,11 @@ public class EntryResource {
   @Autowired
   private EntryService entryService;
 
-  // 顧客一件作成
+  /**
+   *
+   * @param customer
+   * @return
+   */
   @RequestMapping(method = RequestMethod.POST)
   @ResponseStatus(HttpStatus.CREATED)
   public Result postEntry(@RequestBody Entry customer) {

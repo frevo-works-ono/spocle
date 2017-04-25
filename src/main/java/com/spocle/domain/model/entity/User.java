@@ -1,5 +1,6 @@
 package com.spocle.domain.model.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -14,21 +15,19 @@ import lombok.Data;
 @Entity
 @Table(name = "users")
 @Data
-public class User {
+public class User implements Serializable{
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
   @Column
   private String name;
-  @Column
+  @Column(name="mailaddress")
   private String mailAddress;
   @Column
   private String password;
   @Column(name = "temp_key")
   private String tempKey;
-  @Column
-  private String gender;
-  @Column
-  private Date birthday;
+  @Column(name = "line_id")
+  private String lineId;
 
 }

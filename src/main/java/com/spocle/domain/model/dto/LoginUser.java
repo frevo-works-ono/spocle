@@ -1,5 +1,7 @@
 package com.spocle.domain.model.dto;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.security.core.authority.AuthorityUtils;
 
 import com.spocle.domain.model.entity.User;
@@ -14,7 +16,11 @@ public class LoginUser extends org.springframework.security.core.userdetails.Use
    */
   private final User user;
 
-  /**
+  @Getter
+  @Setter
+  private int teamId;
+
+  /*
    * コンストラクタ
    * 
    * @param user

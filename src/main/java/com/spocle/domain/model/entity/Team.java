@@ -39,6 +39,12 @@ public class Team {
   @Column
   private String activityDate;
 
+  @Column(name = "line_group_id")
+  private String lineGroupId;
+
+  @Column(name = "line_status")
+  private int lineStatus;
+
   @OneToMany
   private List<Member> members;
 

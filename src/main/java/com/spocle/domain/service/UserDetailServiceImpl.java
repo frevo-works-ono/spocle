@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -29,6 +30,8 @@ public class UserDetailServiceImpl implements UserDetailsService {
     if (user == null) {
       throw new UsernameNotFoundException("User not found for login id: " + mailAddress);
     }
+
+    System.out.println(new BCryptPasswordEncoder().encode(user.getPassword()));
 
     // ユーザー情報が取得できたらSpring Securityで認証できる形で戻す
     return new LoginUser(user);
