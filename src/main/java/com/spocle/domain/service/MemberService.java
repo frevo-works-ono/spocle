@@ -20,11 +20,11 @@ public class MemberService {
     return memberRepository.findAll();
   }
 
-  public List<Member> findByTeamId(Long teamId) {
+  public List<Member> findByTeamId(String teamId) {
     return memberRepository.findByTeamId(teamId);
   }
 
-  public Member findOne(Long id) {
+  public Member findOne(String id) {
     return memberRepository.findOne(id);
   }
 
@@ -36,7 +36,7 @@ public class MemberService {
     return memberRepository.save(member);
   }
 
-  public void delete(Long id) {
+  public void delete(String id) {
     memberRepository.delete(id);
   }
 }

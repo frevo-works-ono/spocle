@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.spocle.domain.model.entity.Member;
 
-public interface MemberRepository extends JpaRepository<Member, Long> {
-  public List<Member> findByTeamId(Long teamId);
+public interface MemberRepository extends JpaRepository<Member, String> {
+  public List<Member> findByTeamId(String teamId);
 }

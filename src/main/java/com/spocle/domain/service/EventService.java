@@ -24,11 +24,11 @@ public class EventService {
         return eventRepository.findAll();
     }
 
-     public List<Event> findByTeamId(Long teamId) {
+     public List<Event> findByTeamId(String teamId) {
         return eventRepository.findByTeamId(teamId);
      }
 
-    public Event findOne(Long id) {
+    public Event findOne(String id) {
 
         return eventRepository.findOne(id);
     }
@@ -42,7 +42,7 @@ public class EventService {
         return eventRepository.save(member);
     }
 
-    public void delete(Long id) {
+    public void delete(String id) {
 
         eventRepository.delete(id);
     }

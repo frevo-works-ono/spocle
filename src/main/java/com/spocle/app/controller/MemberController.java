@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class MemberController {
 	@RequestMapping(value = "/member", method = RequestMethod.GET)
-    public String index() {
-        return "member";
-    }
+	public String index() {
+		return "member";
+	}
 }

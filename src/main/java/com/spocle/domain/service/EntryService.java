@@ -24,7 +24,7 @@ public class EntryService {
   // return entryRepository.findByTeamId(teamId);
   // }
 
-  public Entry findOne(Long id) {
+  public Entry findOne(String id) {
     return entryRepository.findOne(id);
   }
 
@@ -36,7 +36,7 @@ public class EntryService {
     return entryRepository.save(member);
   }
 
-  public void delete(Long id) {
+  public void delete(String id) {
     entryRepository.delete(id);
   }
 }

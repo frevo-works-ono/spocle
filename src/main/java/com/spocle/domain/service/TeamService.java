@@ -26,7 +26,7 @@ public class TeamService {
     return teamRepository.findAll();
   }
 
-  public Team findOne(Long id) {
+  public Team findOne(String id) {
 
     return teamRepository.findOne(id);
   }
@@ -42,7 +42,7 @@ public class TeamService {
     return teamRepository.save(entry);
   }
 
-  public void delete(Long id) {
+  public void delete(String id) {
     teamRepository.delete(id);
   }
 }

@@ -56,7 +56,7 @@ public class MessageHandler {
 		String str = event.getMessage().getText();
 
 //		// RedisからコードをもとにチームIDを取得
-        Object val = redisTemplate.opsForValue().get(str);
+        String val = redisTemplate.opsForValue().get(str);
 
 
         if(val == null){
@@ -73,9 +73,7 @@ public class MessageHandler {
             return;
         }
 
-        long teamId = Long.parseLong(redisTemplate.opsForValue().get(str));
-
-        Team team = this.teamService.findOne(teamId);
+        Team team = this.teamService.findOne(val);
 
         if(team == null){
             final BotApiResponse apiResponse = LineMessagingServiceBuilder
@@ -113,10 +111,10 @@ public class MessageHandler {
         System.out.println("event: " + event);
     }
 
-    @EventMapping
-    public void handleTemplateMessageEvent(PostbackEvent event) throws Exception {
-        this.templateMessageHandler.reply(event);
-    }
+//    @EventMapping
+//    public void handleTemplateMessageEvent(PostbackEvent event) throws Exception {
+//        this.templateMessageHandler.reply(event);
+//    }
 
     /**
      * ボットがグループに参加した場合

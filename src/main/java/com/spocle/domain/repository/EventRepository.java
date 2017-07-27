@@ -6,6 +6,6 @@ import com.spocle.domain.model.entity.Event;
 
 import java.util.List;
 
-public interface EventRepository extends JpaRepository<Event, Long> {
-    public List<Event> findByTeamId(Long teamId);
+public interface EventRepository extends JpaRepository<Event, String> {
+    public List<Event> findByTeamId(String teamId);
 }

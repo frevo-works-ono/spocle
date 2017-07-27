@@ -13,6 +13,11 @@ public class TeamController {
 	
 	@RequestMapping(value = "/team/new", method = RequestMethod.GET)
     public String create() {
-        return "team";
+        return "teamRegist";
     }
+	
+	@RequestMapping(value = "/team/new", method = RequestMethod.POST)
+	public String regist(){
+		return "";
+	}
 }
